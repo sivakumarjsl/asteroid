@@ -72,11 +72,11 @@ class Home extends Component {
                     : 
                     asteroidDetails!==null? 
                         <div className="text-center col-sm-12">
-                            <div><bold>name:</bold> {asteroidDetails.name} </div>
+                            <div><strong>name:</strong> {asteroidDetails.name} </div>
                             <br/>
-                            <div><bold>nasa_jpl_url:</bold> {asteroidDetails.nasa_jpl_url}</div>
+                            <div><strong>nasa_jpl_url:</strong> {asteroidDetails.nasa_jpl_url}</div>
                             <br/>
-                            <div><bold>is_potentially_hazardous_asteroid:</bold> {asteroidDetails.is_potentially_hazardous_asteroid === true ? 'true' :'false' }</div>
+                            <div><strong>is_potentially_hazardous_asteroid:</strong> {asteroidDetails.is_potentially_hazardous_asteroid === true ? 'true' :'false' }</div>
                             <br/>
                             <Button onClick={this.back} variant="contained" color="primary">Back</Button>
                         </div> :
