@@ -32,7 +32,8 @@ class Home extends Component {
     sumbitAsteriodDetails = (randomId) => {
         this.props.getAsteroidDetails(this.state.id)
         this.setState({
-            viewDetails: true
+            viewDetails: true,
+            id: ''
         })
     } 
 
@@ -80,7 +81,11 @@ class Home extends Component {
                             <Button onClick={this.back} variant="contained" color="primary">Back</Button>
                         </div> :
                         isLoading ? 'isLoading...' :
-                        'Nodata'
+                        <div className="text-center col-sm-12">
+                            <div>Nodata </div>
+                            <br/>
+                            <Button onClick={this.back} variant="contained" color="primary">Back</Button>
+                        </div>
                 }
             </>
         );
