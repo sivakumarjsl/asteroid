@@ -58,7 +58,7 @@ class Home extends Component {
 
     render() {
         const { id, viewDetails } = this.state
-        const {asteroidDetails } = this.props.asteroidReducer
+        const {asteroidDetails, isLoading } = this.props.asteroidReducer
 
         return (
             <>
@@ -79,7 +79,8 @@ class Home extends Component {
                             <br/>
                             <Button onClick={this.back} variant="contained" color="primary">Back</Button>
                         </div> :
-                    'Nodata'
+                        isLoading ? 'isLoading...' :
+                        'Nodata'
                 }
             </>
         );
